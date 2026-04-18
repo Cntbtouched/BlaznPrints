@@ -1,0 +1,29 @@
+# ==========================================
+# BlaznPrints by Diana Jordan
+# ==========================================
+
+# 1. Allow all standard search engines (Google, Bing, Yahoo) to crawl everything
+User-agent: *
+Allow: /
+
+# 2. CRITICAL: Explicitly allow product images.
+# Google Images and Social Media bots (Facebook/Twitter) need access to this folder 
+# to show previews of Diana's work in search results and social links.
+# Note: The %20 represents the space in "blazn pics".
+Allow: /blazn%20pics/
+
+# 3. Block AI Scrapers.
+# Prevents OpenAI, ChatGPT, and Claude from scraping Diana's original artwork for training data.
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+# 4. Sitemap.
+# Tells Google exactly where to find your map of the site.
+# IMPORTANT: Replace 'https://www.blaznprints.com' with your actual domain name!
+Sitemap: https://www.blaznprints.com/sitemap.xml
